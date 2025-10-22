@@ -1,62 +1,45 @@
-# Express.js RESTful API Assignment
+/*
+# 🚂 Week 2: Express.js – Server-Side Framework
 
-This assignment focuses on building a RESTful API using Express.js, implementing proper routing, middleware, and error handling.
+## 📌 Description
+A RESTful API built using **Node.js**, **Express**, and **MongoDB (Mongoose)** for managing products.
+This project demonstrates full CRUD operations, middleware, authentication, validation, and error handling.
 
-## Assignment Overview
+## ⚙️ Setup Instructions
 
-You will:
-1. Set up an Express.js server
-2. Create RESTful API routes for a product resource
-3. Implement custom middleware for logging, authentication, and validation
-4. Add comprehensive error handling
-5. Develop advanced features like filtering, pagination, and search
+1. Install dependencies:
+   npm install express mongoose dotenv express-validator nodemon
 
-## Getting Started
+2. Create a `.env` file with:
+   PORT=5000
+   MONGO_URI=mongodb://127.0.0.1:27017/mern-july
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Run the server:
-   ```
-   npm start
-   ```
+3. Run the server:
+   npm run dev
+   or
+   node server.js
 
-## Files Included
+4. Server runs at: http://localhost:5000
 
-- `Week2-Assignment.md`: Detailed assignment instructions
-- `server.js`: Starter Express.js server file
-- `.env.example`: Example environment variables file
+---
 
-## Requirements
+## 🧩 API Endpoints
 
-- Node.js (v18 or higher)
-- npm or yarn
-- Postman, Insomnia, or curl for API testing
+| Method | Endpoint             | Description           |
+|---------|----------------------|-----------------------|
+| GET     | /api/products        | Get all products      |
+| GET     | /api/products/:id    | Get product by ID     |
+| POST    | /api/products        | Create new product    |
+| PUT     | /api/products/:id    | Update a product      |
+| DELETE  | /api/products/:id    | Delete a product      |
 
-## API Endpoints
+---
 
-The API will have the following endpoints:
+## 🔐 Middleware
+- **Logger:** Logs request method, URL, and timestamp.
+- **Auth:** Checks for `x-api-key` in headers.
+- **Validation:** Ensures product fields are valid before creation or update.
+- **Error Handler:** Handles all async and custom errors gracefully.
 
-- `GET /api/products`: Get all products
-- `GET /api/products/:id`: Get a specific product
-- `POST /api/products`: Create a new product
-- `PUT /api/products/:id`: Update a product
-- `DELETE /api/products/:id`: Delete a product
-
-## Submission
-
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
-
-1. Complete all the required API endpoints
-2. Implement the middleware and error handling
-3. Document your API in the README.md
-4. Include examples of requests and responses
-
-## Resources
-
-- [Express.js Documentation](https://expressjs.com/)
-- [RESTful API Design Best Practices](https://restfulapi.net/)
-- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
+## 👨🏽‍💻 Author
+**Marvin B** – PLP Full Stack Developer
