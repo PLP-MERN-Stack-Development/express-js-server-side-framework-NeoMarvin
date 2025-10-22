@@ -1,5 +1,3 @@
 node_modules/
-git add .
-git commit -m "Removed node_modules from tracking and added .gitignore"
 
 
